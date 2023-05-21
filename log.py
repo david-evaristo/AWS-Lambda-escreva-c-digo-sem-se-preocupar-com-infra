@@ -1,9 +1,12 @@
 import logging
 import json
+import os
+  
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 def log(mensagem):
-    log = logger.info(f'Adicionando log via função: {mensagem}')
+    logger.info(os.environ['MINHA_VAR'])
+    log = logger.info(mensagem)
     return log
